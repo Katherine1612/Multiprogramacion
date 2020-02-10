@@ -1,0 +1,46 @@
+package vector;
+import java.util.Scanner;
+/**
+ *
+ * @author Personal
+ */
+public class Vector {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner e = new Scanner(System.in);
+System.out.print("Intoduce el tamaño de numeros a ingresar: ");
+int tam = e.nextInt();
+int array[] = new int[tam];
+int i = 0;
+do{
+System.out.println("Digita un numero: ");
+int dato = e.nextInt();
+array[i] = dato;
+i++;
+}while( i < array.length);
+
+int pos=0; int neg=0; int nullos=0;
+for( int j = 0; j < array.length; j++ )
+{
+if( array[j] < 0)
+{
+neg++;
+}
+else if( array[j] > 0)
+{
+pos++;
+}
+else{
+nullos++;
+}
+}
+System.out.println("Postivos:"+pos);
+System.out.println("Negativos"+neg);
+System.out.println("Nullos:"+nullos);
+    }
+    
+}
